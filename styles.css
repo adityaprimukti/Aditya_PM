@@ -1,3 +1,6 @@
+
+
+
 /* Custom light blue color for navbar */
 .bg-lightblue {
     background-color: #add8e6 !important; /* Warna biru muda */
@@ -149,19 +152,60 @@ footer {
 }
 
 /* Responsive Design for mobile */
-@media (max-width: 767px) {
-    .photo-container {
-        width: 300px;
-        height: 300px;
+/* Responsive Design for mobile */
+/* Responsif untuk mobile dengan lebar 360px */
+@media (max-width: 360px) {
+    /* Menghindari scroll horizontal */
+    body, html {
+        overflow-x: hidden;
     }
 
+    .navbar-brand{
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+
+    .navbar-toggler-icon{
+        margin-right: 10px;
+    }
+
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%; /* Pastikan container tidak lebih lebar dari layar */
+    }
+
+    /* Sesuaikan ukuran container foto dan background */
+    .photo-container {
+        width: 250px; /* Perkecil ukuran foto container */
+        height: 250px; /* Sesuaikan tinggi agar simetris */
+        border-radius: 50%; /* Circular shape */
+        background: linear-gradient(135deg, #e0f7fa, #80deea); /* Circular gradient background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        margin: 0 auto; /* Posisikan di tengah */
+    }
+
+    /* Sesuaikan ukuran foto profile */
     .profile-photo {
-        width: 270px;
-        height: 270px;
+        width: 220px; /* Foto lebih kecil */
+        height: 220px; /* Sesuaikan dengan tinggi */
+        border-radius: 50%; /* Circular shape */
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    /* Efek zoom saat hover pada foto */
+    .profile-photo:hover {
+        transform: scale(1.1); /* Zoom effect */
     }
 
     .slide-in-left {
-        padding-top: 80px;
+        padding-top: 60px; /* Penyesuaian padding untuk mobile */
     }
 
     .social-icons {
@@ -171,27 +215,24 @@ footer {
     }
 
     .album-container {
-        padding: 20px; /* Adjust padding for mobile */
+        padding: 10px; /* Mengurangi padding untuk mobile */
     }
 
     .album-item {
-        /* Make sure the images are centered on mobile */
-        justify-content: center;
         display: flex;
-        flex-wrap: wrap; /* Allow images to wrap if necessary */
+        justify-content: center; /* Pastikan item album tidak melewati layar */
+        flex-wrap: wrap; /* Membuat gambar membungkus di bawah jika ruang sempit */
     }
 
     .album-item img {
-        /* Adjust the image size for mobile */
-        width: 90%;
-        height: 200px;
-        margin: 10px; /* Add space between the images */
+        width: 90%; /* Sesuaikan ukuran gambar */
+        height: auto;
+        margin: 5px; /* Menambahkan margin di antara gambar */
     }
 
     #album h2 {
-        text-align: center; /* Center the album title on mobile */
+        text-align: center;
     }
-}
 
     #contact .contact-form {
         padding: 20px;
@@ -199,7 +240,8 @@ footer {
 
     footer {
         font-size: 14px;
+        background-color: #add8e6 !important;
+        
     }
-
-
+}
 
