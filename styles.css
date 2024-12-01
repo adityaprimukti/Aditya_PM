@@ -148,18 +148,17 @@ footer {
     }
 }
 
-/* Responsive Design for mobile and tablet devices */
 
-/* Responsive Design for small mobile devices (360px - 480px) */
 /* Responsive Design for small mobile devices (360px - 480px) */
 @media (max-width: 360px) {
     body, html {
         overflow-x: hidden;
+        width: 99%;
     }
 
     .navbar-brand {
         font-size: 1rem;
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
     .navbar-toggler-icon {
@@ -175,8 +174,8 @@ footer {
     }
 
     .photo-container {
-        width: 250px !important; /* Smaller size for photo container */
-        height: 250px !important; /* Square for consistency */
+        width: 200px !important; /* Smaller size for photo container */
+        height: 200px !important; /* Square for consistency */
         border-radius: 50%; /* Circular shape */
         background: linear-gradient(135deg, #e0f7fa, #80deea); /* Circular gradient background */
         display: flex;
@@ -187,8 +186,8 @@ footer {
     }
 
     .profile-photo {
-        width: 230px !important;  /* Gunakan !important untuk memastikan aturan diterapkan */
-        height: 230px !important;
+        width: 180px !important;  /* Gunakan !important untuk memastikan aturan diterapkan */
+        height: 180px !important;
         border-radius: 50%;
     }
 
@@ -208,6 +207,7 @@ footer {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center !important;
     }
 
     .album-item img {
@@ -227,42 +227,95 @@ footer {
 }
 
 /* Responsive Design for larger mobile screens and tablets (481px - 768px) */
+/* Adjustments for Album Section */
 @media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-
-    .navbar-toggler-icon {
-        margin-right: 15px;
-    }
-
-    .photo-container {
-        width: 300px; /* Adjusted size for tablets */
-        height: 300px;
-        margin-top: 30px !important;
-    }
-    .photo-container{
-        width: 270px !important;
-        height: 270px !important;
-    }
-
-    .profile-photo {
-        width: 250px !important;
-        height: 250px !important;
-    }
-
     .album-container {
-        padding: 15px;
+        padding: 15px; /* Adjust padding for album */
+    }
+
+    .album-item {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
     .album-item img {
-        width: 95%;
+        width: 95%; /* Ensure image is wider on smaller screens */
+        height: auto;
+        margin: 5px;
+        border-radius: 15px; /* Rounded corners */
+    }
+
+    #album h2 {
+        margin-bottom: 30px; /* Reduced margin */
+    }
+}
+
+/* Adjustments for Contact Form */
+@media (max-width: 768px) {
+    #contact {
+        padding: 40px 0; /* Reduced padding */
+    }
+
+    .contact-form .form-control {
+        margin-bottom: 10px; /* Reduced space between inputs */
+    }
+
+    .contact-form button {
+        width: 100%; /* Full width button */
+        padding: 10px;
+    }
+
+    /* Reduce form's size for mobile */
+    .contact-form {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* Adjustments for smaller screens (360px - 480px) */
+@media (max-width: 480px) {
+    body,html{
+        overflow-x: hidden;
+    }
+
+    .photo-container {
+        width: 220px !important; /* Smaller size for photo container */
+        height: 220px !important; /* Square for consistency */
+        border-radius: 50%; /* Circular shape */
+        background: linear-gradient(135deg, #e0f7fa, #80deea); /* Circular gradient background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        margin: 0 auto; /* Center the photo container */
+    }
+
+    .profile-photo {
+        width: 200px !important;  /* Gunakan !important untuk memastikan aturan diterapkan */
+        height: 200px !important;
+        border-radius: 50%;
+    }
+    .album-container {
+        padding: 10px;
+    }
+
+    .album-item img {
+        width: 100%; /* Ensure image is full width on very small screens */
+        height: auto;
+    }
+
+    #contact .contact-form {
+        padding: 15px;
+        max-width: 100%;
     }
 
     footer {
-        font-size: 16px;
+        font-size: 12px;
     }
 }
+
 
 /* Responsive Design for desktop (769px - 1080px) */
 @media (max-width: 1080px) {
